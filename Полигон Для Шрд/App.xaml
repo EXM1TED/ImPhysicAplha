@@ -17,5 +17,14 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        
+        <!--Style for buttonsTest-->
+        <Style x:Key="TaskWindowButtonTest" TargetType="Button">
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="80"/>
+            <Setter Property="Margin" Value="10 10 0 0"/>
+            <Setter Property="FontSize" Value="24"/>
+        </Style>
+            
     </Application.Resources>
 </Application>

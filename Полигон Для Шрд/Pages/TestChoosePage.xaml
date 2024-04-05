@@ -1,0 +1,147 @@
+﻿<Page x:Class="Полигон_Для_Шрд.Pages.TestChoosePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Полигон_Для_Шрд.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="TestChoosePage">
+
+    <Grid>
+        <ListBox Grid.Row="1"
+                 Grid.Column="0"
+                 VerticalAlignment="Center"
+                 Margin="0 10 0 0"
+                 BorderThickness="0">
+            <ListBoxItem HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <Button Name="btnTest1"
+                            Content="Тест 1"
+                            Click="btnTest1_Click"
+                            Style="{StaticResource TaskWindowButtonTest}"/>
+                    <Button Name="btnTest2"
+                            Content="Тест 2"
+                            Click="btnTest2_Click"
+                            Style="{StaticResource TaskWindowButtonTest}"/>
+                    <Button Name="btnTest3"
+                            Content="Тест 3"
+                            Click="btnTest3_Click"
+                            Style="{StaticResource TaskWindowButtonTest}"/>
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <Button Name="btnTest4"
+            Content="Тест 1"
+            Click="btnTest1_Click"
+            Style="{StaticResource TaskWindowButtonTest}"/>
+                    <Button Name="btnTest5"
+            Content="Тест 2"
+            Click="btnTest2_Click"
+            Style="{StaticResource TaskWindowButtonTest}"/>
+                    <Button Name="btnTest6"
+            Content="Тест 3"
+            Click="btnTest3_Click"
+            Style="{StaticResource TaskWindowButtonTest}"/>
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <Button Name="btnTest7"
+                Content="Тест 1"
+                Click="btnTest1_Click"
+                Style="{StaticResource TaskWindowButtonTest}"/>
+                    <Button Name="btnTest8"
+                Content="Тест 2"
+                Click="btnTest2_Click"
+                Style="{StaticResource TaskWindowButtonTest}"/>
+                    <Button Name="btnTest9"
+                Content="Тест 3"
+                Click="btnTest3_Click"
+                Style="{StaticResource TaskWindowButtonTest}"/>
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <Button Name="btnTest10"
+                     Content="Тест 1"
+                    Click="btnTest1_Click"
+                    Style="{StaticResource TaskWindowButtonTest}"/>
+                    <Button Name="btnTest11"
+                    Content="Тест 2"
+                    Click="btnTest2_Click"
+                    Style="{StaticResource TaskWindowButtonTest}"/>
+                    <Button Name="btnTest12"
+                     Content="Тест 3"
+                     Click="btnTest3_Click"
+                     Style="{StaticResource TaskWindowButtonTest}"/>
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <Button Name="btnTest13"
+                Content="Тест 1"
+                Click="btnTest1_Click"
+                Style="{StaticResource TaskWindowButtonTest}"/>
+                    <Button Name="btnTest14"
+                Content="Тест 2"
+                Click="btnTest2_Click"
+                Style="{StaticResource TaskWindowButtonTest}"/>
+                    <Button Name="btnTest15"
+                Content="Тест 3"
+                Click="btnTest3_Click"
+                Style="{StaticResource TaskWindowButtonTest}"/>
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <Button Name="btnTest16"
+Content="Тест 1"
+Click="btnTest1_Click"
+Style="{StaticResource TaskWindowButtonTest}"/>
+                    <Button Name="btnTest17"
+Content="Тест 2"
+Click="btnTest2_Click"
+Style="{StaticResource TaskWindowButtonTest}"/>
+                    <Button Name="btnTest18"
+Content="Тест 3"
+Click="btnTest3_Click"
+Style="{StaticResource TaskWindowButtonTest}"/>
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <Button Name="btnTest19"
+    Content="Тест 1"
+    Click="btnTest1_Click"
+    Style="{StaticResource TaskWindowButtonTest}"/>
+                    <Button Name="btnTest20"
+    Content="Тест 2"
+    Click="btnTest2_Click"
+    Style="{StaticResource TaskWindowButtonTest}"/>
+                    <Button Name="btnTest21"
+    Content="Тест 3"
+    Click="btnTest3_Click"
+    Style="{StaticResource TaskWindowButtonTest}"/>
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <Button Name="btnTest22"
+         Content="Тест 1"
+        Click="btnTest1_Click"
+        Style="{StaticResource TaskWindowButtonTest}"/>
+                    <Button Name="btnTest23"
+        Content="Тест 2"
+        Click="btnTest2_Click"
+        Style="{StaticResource TaskWindowButtonTest}"/>
+                    <Button Name="btnTest24"
+         Content="Тест 3"
+         Click="btnTest3_Click"
+         Style="{StaticResource TaskWindowButtonTest}"/>
+                </StackPanel>
+            </ListBoxItem>
+        </ListBox>
+    </Grid>
+</Page>

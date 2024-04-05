@@ -11,8 +11,8 @@ using Полигон_Для_Шрд.Classes;
 namespace Полигон_Для_Шрд.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20240403144619_MainMigration")]
-    partial class MainMigration
+    [Migration("20240405120908_Test")]
+    partial class Test
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -76,6 +76,22 @@ namespace Полигон_Для_Шрд.Migrations
                     b.HasIndex("NumberOfClassId");
 
                     b.ToTable("Tasks");
+
+                    b.HasData(
+                        new
+                        {
+                            TaskId = 1,
+                            Anwer = "наука",
+                            NumberOfClassId = 7,
+                            Task = "Что такое физика"
+                        },
+                        new
+                        {
+                            TaskId = 2,
+                            Anwer = "ялвение",
+                            NumberOfClassId = 7,
+                            Task = "Что такое диффузия"
+                        });
                 });
 
             modelBuilder.Entity("Полигон_Для_Шрд.Classes.User", b =>
@@ -106,9 +122,11 @@ namespace Полигон_Для_Шрд.Migrations
 
             modelBuilder.Entity("Полигон_Для_Шрд.Classes.NumberOfClass", b =>
                 {
-                    b.HasOne("Полигон_Для_Шрд.Classes.User", null)
+                    b.HasOne("Полигон_Для_Шрд.Classes.User", "User")
                         .WithMany("NumberOfClasses")
                         .HasForeignKey("UserId");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Полигон_Для_Шрд.Classes.Tasks", b =>

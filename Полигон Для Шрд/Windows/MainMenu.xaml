@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Полигон_Для_Шрд.Windows"
         mc:Ignorable="d"
-        Title="MainMenu" Height="450" Width="800">
+        Title="MainMenu" Height="800" Width="1600">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -20,10 +20,12 @@
                     Orientation="Horizontal">
             <TextBlock Text="Logo" Margin="10 0 0 0"
                        FontSize="64"/>
-            <Button Content="Тесты" Width="200" Margin="10 0 0 0"
+            <Button 
+                    Name="btnMainWindowToTaskWindow"
+                    Content="Тесты" Width="200" Margin="100 0 0 0"
                     Style="{StaticResource RoundButtonTemplate}"
-                    FontSize="36"/>
-            <Button Content="Уроки" Margin="10 0 0 0"
+                    FontSize="36" Click="btnMainWindowToTaskWindow_Click"/>
+            <Button Content="Уроки" Margin="100 0 0 0"
                     Style="{StaticResource RoundButtonTemplate}"
                     Width="200"
                     FontSize="36"/>
@@ -36,13 +38,22 @@
                 FontSize="24"/>
           </Hyperlink>
         </TextBlock>
-        <StackPanel Grid.Row="1" Grid.Column="0">
-            <TextBlock 
-                Text="Здесь ифна об пройденных тестах 
-                       и уроках" FontSize="56"
-                       TextWrapping="Wrap"
-                TextAlignment="Center"
-                VerticalAlignment="Center"/>
+        <StackPanel
+            Grid.Row="1"
+            Grid.Column="0"
+            Orientation="Vertical"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+            <TextBlock
+                Text="{Binding Path=Class}"
+                FontSize="36"
+                TextAlignment="Center"/>
+            <ProgressBar
+                Name="mainProgressBar" 
+                Minimum="0" Maximum="100"
+                Height="50"
+                Value="3"
+                Width="500"/>
         </StackPanel>
     </Grid>
 </Window>

@@ -78,23 +78,16 @@ namespace Полигон_Для_Шрд.Migrations
                         new
                         {
                             TaskId = 1,
-                            Anwer = "Наука",
+                            Anwer = "наука",
                             NumberOfClassId = 7,
                             Task = "Что такое физика"
                         },
                         new
                         {
                             TaskId = 2,
-                            Anwer = "Наука",
+                            Anwer = "ялвение",
                             NumberOfClassId = 7,
-                            Task = "Что такое физика"
-                        },
-                        new
-                        {
-                            TaskId = 3,
-                            Anwer = "Наука",
-                            NumberOfClassId = 7,
-                            Task = "Что такое физика"
+                            Task = "Что такое диффузия"
                         });
                 });
 

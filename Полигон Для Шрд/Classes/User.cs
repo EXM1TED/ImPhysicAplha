@@ -15,10 +15,8 @@ namespace Полигон_Для_Шрд.Classes
         [Key]
         public int UserId { get; set; }
         [Column("Login")]
-        [Required]
         public string Login { get; set; }
         [Column("Password")]
-        [Required]
         public string Password { get; set; }
         [Column("Class")]
         public int Class {  get; set; }

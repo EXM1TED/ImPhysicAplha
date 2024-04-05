@@ -7,7 +7,7 @@
 namespace Полигон_Для_Шрд.Migrations
 {
     /// <inheritdoc />
-    public partial class MainMigration : Migration
+    public partial class Test : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -73,6 +73,15 @@ namespace Полигон_Для_Шрд.Migrations
                     { 7, null },
                     { 8, null },
                     { 9, null }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Tasks",
+                columns: new[] { "Id", "Answer", "NumberOfClassId", "Task" },
+                values: new object[,]
+                {
+                    { 1, "наука", 7, "Что такое физика" },
+                    { 2, "ялвение", 7, "Что такое диффузия" }
                 });
 
             migrationBuilder.CreateIndex(

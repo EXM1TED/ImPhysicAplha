@@ -13,7 +13,6 @@ namespace Полигон_Для_Шрд.Classes
         public DbSet<User> Users { get; set; } = null!;
         public DbSet<NumberOfClass> NumberOfClasses { get; set; } = null!;
         public DbSet<Tasks> Tasks { get; set; } = null!;
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite("Data Source=DataBase.db");
@@ -25,10 +24,10 @@ namespace Полигон_Для_Шрд.Classes
                 new NumberOfClass { NumberOfClassId = 8 },
                 new NumberOfClass { NumberOfClassId = 9 }
                 );
-            modelBuilder.Entity<Tasks>().HasData(
-                new Tasks { TaskId = 1, Task = "Что такое физика", Anwer = "Наука", NumberOfClassId = 7 },
-                new Tasks { TaskId = 2, Task = "Что такое физика", Anwer = "Наука", NumberOfClassId = 7 },
-                new Tasks { TaskId = 3, Task = "Что такое физика", Anwer = "Наука", NumberOfClassId = 7 }
+            modelBuilder.Entity<Tasks>().HasData
+                (
+                new Tasks { TaskId = 1, Task = "Что такое физика", Anwer = "наука", NumberOfClassId = 7 },
+                new Tasks { TaskId = 2, Task = "Что такое диффузия", Anwer = "ялвение", NumberOfClassId = 7 }
                 );
         }
     }
