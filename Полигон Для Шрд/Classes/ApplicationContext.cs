@@ -19,7 +19,12 @@ namespace Полигон_Для_Шрд.Classes
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<NumberOfClass>().HasData(
+            modelBuilder.Entity<NumberOfClass>()
+                .HasOne(c => c.User)
+                .WithMany(c => c.NumberOfClasses)
+                .HasForeignKey(c => c.UserId);
+            modelBuilder.Entity<NumberOfClass>()
+                .HasData(
                 new NumberOfClass { NumberOfClassId = 7 },
                 new NumberOfClass { NumberOfClassId = 8 },
                 new NumberOfClass { NumberOfClassId = 9 }
@@ -27,8 +32,14 @@ namespace Полигон_Для_Шрд.Classes
             modelBuilder.Entity<Tasks>().HasData
                 (
                 new Tasks { TaskId = 1, Task = "Что такое физика", Anwer = "наука", NumberOfClassId = 7 },
-                new Tasks { TaskId = 2, Task = "Что такое диффузия", Anwer = "ялвение", NumberOfClassId = 7 }
+                new Tasks { TaskId = 2, Task = "Что такое диффузия", Anwer = "ялвение", NumberOfClassId = 7 },
+                new Tasks { TaskId = 3, Task = "Что такое магнетизм", Anwer = "явление", NumberOfClassId = 8 },
+                new Tasks { TaskId = 4, Task = "Как найти количество теплоты", Anwer = "по формуле", NumberOfClassId = 8 }
                 );
+            modelBuilder.Entity<Tasks>()
+                .HasOne(c => c.NumberOfClass)
+                .WithMany(t => t.Tasks)
+                .HasForeignKey(c => c.NumberOfClassId);
         }
     }
 }
