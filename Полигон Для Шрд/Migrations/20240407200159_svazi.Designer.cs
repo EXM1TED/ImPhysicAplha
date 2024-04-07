@@ -11,8 +11,8 @@ using Полигон_Для_Шрд.Classes;
 namespace Полигон_Для_Шрд.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20240405120908_Test")]
-    partial class Test
+    [Migration("20240407200159_svazi")]
+    partial class svazi
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,6 +24,10 @@ namespace Полигон_Для_Шрд.Migrations
                 {
                     b.Property<int>("NumberOfClassId")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("Number_of_class_id");
+
+                    b.Property<int>("NumberOfClassSchool")
                         .HasColumnType("INTEGER")
                         .HasColumnName("Number_of_class");
 
@@ -39,22 +43,24 @@ namespace Полигон_Для_Шрд.Migrations
                     b.HasData(
                         new
                         {
-                            NumberOfClassId = 7
+                            NumberOfClassId = 1,
+                            NumberOfClassSchool = 7
                         },
                         new
                         {
-                            NumberOfClassId = 8
+                            NumberOfClassId = 2,
+                            NumberOfClassSchool = 8
                         },
                         new
                         {
-                            NumberOfClassId = 9
+                            NumberOfClassId = 3,
+                            NumberOfClassSchool = 9
                         });
                 });
 
             modelBuilder.Entity("Полигон_Для_Шрд.Classes.Tasks", b =>
                 {
                     b.Property<int>("TaskId")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER")
                         .HasColumnName("Id");
 
@@ -73,8 +79,6 @@ namespace Полигон_Для_Шрд.Migrations
 
                     b.HasKey("TaskId");
 
-                    b.HasIndex("NumberOfClassId");
-
                     b.ToTable("Tasks");
 
                     b.HasData(
@@ -82,15 +86,29 @@ namespace Полигон_Для_Шрд.Migrations
                         {
                             TaskId = 1,
                             Anwer = "наука",
-                            NumberOfClassId = 7,
+                            NumberOfClassId = 1,
                             Task = "Что такое физика"
                         },
                         new
                         {
                             TaskId = 2,
                             Anwer = "ялвение",
-                            NumberOfClassId = 7,
+                            NumberOfClassId = 1,
                             Task = "Что такое диффузия"
+                        },
+                        new
+                        {
+                            TaskId = 3,
+                            Anwer = "явление",
+                            NumberOfClassId = 3,
+                            Task = "Что такое магнетизм"
+                        },
+                        new
+                        {
+                            TaskId = 4,
+                            Anwer = "по формуле",
+                            NumberOfClassId = 3,
+                            Task = "Как найти количество теплоты"
                         });
                 });
 
@@ -133,7 +151,9 @@ namespace Полигон_Для_Шрд.Migrations
                 {
                     b.HasOne("Полигон_Для_Шрд.Classes.NumberOfClass", "NumberOfClass")
                         .WithMany("Tasks")
-                        .HasForeignKey("NumberOfClassId");
+                        .HasForeignKey("TaskId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("NumberOfClass");
                 });

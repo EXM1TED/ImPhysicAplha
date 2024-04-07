@@ -11,9 +11,11 @@ namespace Полигон_Для_Шрд.Classes
     [Table("NumbersOfClasses")]
     public class NumberOfClass
     {
-        [Column("Number_of_class")]
+        [Column("Number_of_class_id")]
         [Key]
         public int NumberOfClassId { get; set; }
+        [Column("Number_of_class")]
+        public int NumberOfClassSchool { get; set; }
         public int? UserId { get; set; }
         public User? User { get; set; }
         public List<Tasks> Tasks { get; set; } = new();
