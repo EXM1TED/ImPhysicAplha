@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:Полигон_Для_Шрд"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        <!--Style for MainButtons-->
         <Style x:Key="RoundButtonTemplate" TargetType="Button">
             <Setter Property="Background" Value="Purple"/>
             <Setter Property="Foreground" Value="Black"/>
@@ -18,12 +19,92 @@
             </Setter>
         </Style>
         
-        <!--Style for buttonsTest-->
+        <!--Style for CheckBoxTest-->
+        <Style x:Key="CheckBoxTest" TargetType="CheckBox">
+            
+            <Setter Property="Margin" Value="0 10 0 0"/>
+            <Setter Property="LayoutTransform">
+                <Setter.Value>
+                    <ScaleTransform ScaleX="3" ScaleY="3"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        <!--Style for RadioButtonTest-->
+        <Style x:Key="radioButtonTest" TargetType="RadioButton">
+            <Setter Property="Margin" Value="0 15 0 0"/>
+            <Setter Property="Grid.Column" Value="1"/>
+            <Setter Property="Grid.Row" Value="1"/>
+            <Setter Property="LayoutTransform">
+                <Setter.Value>
+                    <ScaleTransform ScaleX="3" ScaleY="3"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        <!--Style for ButtonsTestNext and ButtonReturn-->
+        <Style x:Key="RoundButtonTemplateTest" TargetType="Button">
+            <Setter Property="Background" Value="Purple"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Width" Value="175"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="FontSize" Value="32"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="0 0 50 0"/>
+            <Setter Property="Grid.Row" Value="2"/>
+            <Setter Property="Grid.Column" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="20" Background="{TemplateBinding Background}" BorderThickness="1">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!--Style for TextBlockTestTaskNumber-->
+        <Style x:Key="TextBlockTestTaskNummber" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="32"/>
+            <Setter Property="Margin" Value="20 0 0 0"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="Grid.Row" Value="0"/>
+            <Setter Property="Grid.Column" Value="0"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
+        
+        <!--Style for TextBlcokTestTask-->
+        <Style x:Key="TextBlockTestTask" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="32"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="20 0 0 0"/>
+            <Setter Property="Grid.Row" Value="0"/>
+            <Setter Property="Grid.Column" Value="1"/>
+            <Setter Property="TextWrapping" Value="WrapWithOverflow"/>
+        </Style>
+
+        <!--Style for SelectTestButton-->
         <Style x:Key="TaskWindowButtonTest" TargetType="Button">
-            <Setter Property="Width" Value="200"/>
-            <Setter Property="Height" Value="80"/>
-            <Setter Property="Margin" Value="10 10 0 0"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Width" Value="180"/>
+            <Setter Property="Height" Value="75"/>
+            <Setter Property="Margin" Value="0 0 10 0"/>
             <Setter Property="FontSize" Value="24"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="8" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
             
     </Application.Resources>

@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Полигон_Для_Шрд.Classes;
+using Полигон_Для_Шрд.Pages._7classpages.Test1;
 
 namespace Полигон_Для_Шрд.Pages
 {
@@ -25,20 +26,18 @@ namespace Полигон_Для_Шрд.Pages
         {
             InitializeComponent();
         }
+        private void btnTestAboutPhysic_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new PageTestTask1());
+        }
 
         private void btnTest3_Click(object sender, RoutedEventArgs e)
         {
 
         }
-
         private void btnTest2_Click(object sender, RoutedEventArgs e)
         {
 
-        }
-
-        private void btnTest1_Click(object sender, RoutedEventArgs e)
-        {
-            FrameClass.frame.Navigate(new TestPage());
         }
     }
 }

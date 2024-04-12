@@ -20,6 +20,5 @@ namespace Полигон_Для_Шрд.Classes
         public string Password { get; set; }
         [Column("Class")]
         public int Class {  get; set; }
-        public List<NumberOfClass> NumberOfClasses { get; set; } = new();
     }
 }

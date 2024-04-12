@@ -12,25 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Полигон_Для_Шрд.Classes;
 
 namespace Полигон_Для_Шрд.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для TestPage.xaml
+    /// Логика взаимодействия для TestCompletePage.xaml
     /// </summary>
-    public partial class TestPage : Page
+    public partial class TestCompletePage : Page
     {
-        public TestPage()
+        public TestCompletePage()
         {
             InitializeComponent();
-            ApplicationContext db = new ApplicationContext();
-            var tasks = db.Tasks.ToList();
-            foreach(Tasks t in tasks)
-            {
-                textBlockNumberOfTask.Text = t.TaskId.ToString();
-                textBlockTaskName.Text = t.Task; 
-            }
         }
     }
 }
