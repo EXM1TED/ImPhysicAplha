@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -36,11 +37,17 @@ namespace Полигон_Для_Шрд.Pages._7classpages.Test1
             {
                 NavigationService.Navigate(new PageTestTask3());
             }
+            
+            if (chkBoxCorrectAnswer.IsChecked == true)
+            {
+                SaveResult.resultOfTest.Result++;
+            }
         }
 
         private void btnReturn_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.GoBack();
         }
+
     }
 }

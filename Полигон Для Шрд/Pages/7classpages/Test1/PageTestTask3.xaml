@@ -21,14 +21,14 @@
         <TextBlock Text="Задание №3"
                    Style="{StaticResource TextBlockTestTaskNummber}"/>
         <TextBlock
-         Name="textBlockTaskName"
-         Text="Чем особенен микромир?"
-         Style="{StaticResource TextBlockTestTask}"/>
+            Name="textBlockTaskName"
+            Text="Чем особенен микромир?"
+            Style="{StaticResource TextBlockTestTask}"/>
         <StackPanel Grid.Row="1"
                     Grid.Column="1"
-             Orientation="Vertical"
-             VerticalAlignment="Center"
-             HorizontalAlignment="Center">
+                    Orientation="Vertical"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
             <RadioButton
                      Style="{StaticResource  radioButtonTest}">
                 <TextBlock TextWrapping="Wrap"
@@ -37,32 +37,34 @@
                 </TextBlock>
             </RadioButton>
             <RadioButton
-         Style="{StaticResource radioButtonTest}">
+                    
+                    Style="{StaticResource radioButtonTest}">
                 <TextBlock TextWrapping="Wrap"
-                             FontSize="8">
+                           FontSize="8"
+                           Name="rdButtonCorrectAnswer">
                     Молекулы, атомы, элементарные частицы, которые невозможно увидеть человеческим взглядом и их разномерность исчисляется до 10^-18 … 10^-4м, а жизнь от бесконечности до 10^-24 с.
                 </TextBlock>
             </RadioButton>
             <RadioButton
                      Style="{StaticResource radioButtonTest}">
                 <TextBlock TextWrapping="Wrap"
-                            FontSize="8">
+                           FontSize="8">
                     Маленькие частицы, которые невозможно увидеть человеческим глазом
                 </TextBlock>
             </RadioButton>
         </StackPanel>
         <StackPanel Grid.Row="2"
                     Grid.Column="1"
-            Orientation="Horizontal"
-            HorizontalAlignment="Right">
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right">
             <Button Name="btnReturn" Style="{StaticResource RoundButtonTemplateTest}"
-        Content="Назад"
-        Grid.Row="2"
-        Click="btnReturn_Click" />
+                    Content="Назад"
+                    Grid.Row="2"
+                    Click="btnReturn_Click" />
             <Button Name="btnNext" Style="{StaticResource RoundButtonTemplateTest}"
-        Content="Далее"
-        Grid.Row="2"
-        Click="btnNext_Click" />
+                    Content="Далее"
+                    Grid.Row="2"
+                    Click="btnNext_Click" />
         </StackPanel>
     </Grid>
 </Page>

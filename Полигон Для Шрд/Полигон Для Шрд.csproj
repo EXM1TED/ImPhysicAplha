@@ -25,13 +25,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\8classpages\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Resource Include="Images\Logo.png" />
     <Resource Include="Images\TestComoleteBad.jpg" />
     <Resource Include="Images\TestCompleteGood.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Pages\8ClassPages\Test 1\" />
   </ItemGroup>
 
 </Project>

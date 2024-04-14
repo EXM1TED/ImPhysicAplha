@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Полигон_Для_Шрд.Classes;
 
 namespace Полигон_Для_Шрд.Pages._7classpages.Test1
 {
@@ -33,6 +35,11 @@ namespace Полигон_Для_Шрд.Pages._7classpages.Test1
             else
             {
                 NavigationService.Navigate(new PageTestTask8());
+            }
+
+            if (rdButtonCorrectAnswer.IsChecked == true)
+            {
+                SaveResult.resultOfTest.Result++;
             }
         }
 

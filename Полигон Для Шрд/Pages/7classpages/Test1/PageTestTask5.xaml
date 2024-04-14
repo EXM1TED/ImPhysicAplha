@@ -33,7 +33,9 @@
                      Style="{StaticResource radioButtonTest}"/>
             <RadioButton Content="60 + 3 * 10^5"
                      Style="{StaticResource radioButtonTest}"/>
-            <RadioButton Content="7*9*10^5"
+            <RadioButton
+                     Name="rdButtonCorrectAnswer"
+                     Content="7*9*10^5"
                      Style="{StaticResource radioButtonTest}"/>
         </StackPanel>
         <StackPanel Grid.Row="2"

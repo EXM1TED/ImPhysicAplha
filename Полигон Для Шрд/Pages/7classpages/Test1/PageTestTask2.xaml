@@ -33,7 +33,8 @@
                          Style="{StaticResource radioButtonTest}"/>
             <RadioButton Content="200"
                          Style="{StaticResource radioButtonTest}"/>
-            <RadioButton Content="2000"
+            <RadioButton Name="chkBoxCorrectAnswer"
+                         Content="2000"
                          Style="{StaticResource radioButtonTest}"/>
         </StackPanel>
         <StackPanel Grid.Row="2"

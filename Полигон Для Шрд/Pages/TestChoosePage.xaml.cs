@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Полигон_Для_Шрд.Classes;
 using Полигон_Для_Шрд.Pages._7classpages.Test1;
+using Полигон_Для_Шрд.Pages._7classpages.Test3;
 
 namespace Полигон_Для_Шрд.Pages
 {
@@ -33,7 +34,7 @@ namespace Полигон_Для_Шрд.Pages
 
         private void btnTest3_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new Test3Task1());
         }
         private void btnTest2_Click(object sender, RoutedEventArgs e)
         {

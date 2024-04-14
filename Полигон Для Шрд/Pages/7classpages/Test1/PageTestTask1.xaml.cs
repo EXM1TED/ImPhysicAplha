@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,10 +25,19 @@ namespace Полигон_Для_Шрд.Pages._7classpages.Test1
         public PageTestTask1()
         {
             InitializeComponent();
+            User user = new User();
+            user = UserSave.userSave;
+            ResultOfTest result = new ResultOfTest();
+            result.Result = 0;
+            result.UserId = user.UserId;
+            result.TestName = "Основы физики";
+            SaveResult.resultOfTest = result;
         }
 
         private void btnNext_Click(object sender, RoutedEventArgs e)
         {
+            User user = new User();
+            user = UserSave.userSave;
             if (this.NavigationService.CanGoForward) 
             {
                 this.NavigationService.GoForward();
@@ -35,6 +45,16 @@ namespace Полигон_Для_Шрд.Pages._7classpages.Test1
             else
             {
                 NavigationService.Navigate(new PageTestTask2());
+            }
+
+            if (checkBoxAudio.IsChecked == true
+                && checkBoxElectricity.IsChecked == true
+                && checkBoxLight.IsChecked == true
+                && checkBoxMagnetic.IsChecked == true
+                && checkBoxMech.IsChecked == true
+                && checkBoxThermo.IsChecked == true)
+            {
+                SaveResult.resultOfTest.Result++;
             }
         }
     }

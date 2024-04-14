@@ -32,7 +32,9 @@
             HorizontalAlignment="Center">
             <RadioButton Content="1,15"
                  Style="{StaticResource radioButtonTest}"/>
-            <RadioButton Content="11500"
+            <RadioButton
+                 Name="rdButtonCorrectAnswer"
+                 Content="11500"
                  Style="{StaticResource radioButtonTest}"/>
             <RadioButton Content="0,00115"
                  Style="{StaticResource radioButtonTest}"/>

@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Полигон_Для_Шрд.Classes;
 using Полигон_Для_Шрд.Pages;
+using Полигон_Для_Шрд.Pages._8ClassPages;
 
 namespace Полигон_Для_Шрд.Windows
 {
@@ -28,8 +29,14 @@ namespace Полигон_Для_Шрд.Windows
             user = UserSave.userSave;
             this.DataContext = user;
 
-            FrameClass.frame = PageOfTests;
-            FrameClass.frame.Navigate(new TestChoosePage());
+            if (user.Class == 7 )
+            {
+                PageOfTests.Navigate(new TestChoosePage());
+            }
+            if (user.Class == 8 ) 
+            {
+                PageOfTests.Navigate(new EightClassChooseTestPage());
+            }
         }
 
         private void btnTest3_Click(object sender, RoutedEventArgs e)

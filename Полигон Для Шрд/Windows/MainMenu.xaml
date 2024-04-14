@@ -18,17 +18,14 @@
         <StackPanel Grid.Row="0" HorizontalAlignment="Left"
                     VerticalAlignment="Center"
                     Orientation="Horizontal">
-            <TextBlock Text="Logo" Margin="10 0 0 0"
-                       FontSize="64"/>
+            <Image Source="\Images\Logo.png"/>
             <Button 
                     Name="btnMainWindowToTaskWindow"
-                    Content="Тесты" Width="200" Margin="100 0 0 0"
+                    Content="Тесты" 
                     Style="{StaticResource RoundButtonTemplate}"
-                    FontSize="36" Click="btnMainWindowToTaskWindow_Click"/>
-            <Button Content="Уроки" Margin="100 0 0 0"
-                    Style="{StaticResource RoundButtonTemplate}"
-                    Width="200"
-                    FontSize="36"/>
+                    Click="btnMainWindowToTaskWindow_Click"/>
+            <Button Content="Уроки"
+                    Style="{StaticResource RoundButtonTemplate}"/>
         </StackPanel>
         <TextBlock Grid.Row="0" Grid.Column="1"
                    HorizontalAlignment="Center"
@@ -42,10 +39,19 @@
             Grid.Row="1"
             Grid.Column="0"
             Orientation="Vertical"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center">
-            <StackPanel>
-                <Label Content="Пройденные тесты:"/>
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top">
+            <StackPanel Grid.Row="1"
+                        Grid.Column="0"
+                        Width="350"
+                        Margin="50 0 0 0"
+                        Orientation="Vertical">
+                <Label Name="label" Content="Пройденные тесты:"
+                       FontSize="28"/>
+                <ListBox   Name="lstBoxOfCompleTest"
+                           Height="350"
+                           Width="350">
+                </ListBox>
             </StackPanel>
         </StackPanel>
     </Grid>

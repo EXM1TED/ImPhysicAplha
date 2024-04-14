@@ -19,8 +19,13 @@
                             Style="{StaticResource TaskWindowButtonTest}"
                             Click="btnTestAboutPhysic_Click"
                             Content="Тест 1"/>
-                    <Button Style="{StaticResource TaskWindowButtonTest}"/>
-                    <Button Style="{StaticResource TaskWindowButtonTest}"/>
+                    <Button Name="btnTest2"
+                            Style="{StaticResource TaskWindowButtonTest}"
+                            Content="Тест 2"/>
+                    <Button Name="btnTest3"
+                            Style="{StaticResource TaskWindowButtonTest}"
+                            Content="Тест 3"
+                            Click="btnTest3_Click"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal"
                             Margin="0 0 0 10">
