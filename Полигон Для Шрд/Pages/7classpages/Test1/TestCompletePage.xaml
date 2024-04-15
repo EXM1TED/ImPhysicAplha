@@ -23,7 +23,7 @@
             <TextBlock Name="txtBlockResult"
                        FontSize="30"
                        TextAlignment="Center"/>
-            <Image Source="/Images/TestCompleteGood.png"
+            <Image Name="ImageResult"
                    Width="400"
                    Height="300"
                    VerticalAlignment="Top"/>
