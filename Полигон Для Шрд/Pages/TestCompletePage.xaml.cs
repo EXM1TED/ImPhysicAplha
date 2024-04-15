@@ -34,6 +34,7 @@ namespace Полигон_Для_Шрд.Pages
             foreach (var test in result)
             {
                 txtBlockResult.Text = $"Ваш результат: {test.Result} из 8";
+                MessageBox.Show($"{test.Result}");
             }
         }
 
