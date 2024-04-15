@@ -38,11 +38,6 @@ namespace Полигон_Для_Шрд.Windows
             {
                 lstBoxOfCompleTest.Items.Add($"{test.TestName}, результат: {test.Result} из 8");
             }
-            var users = db.Users.ToList();
-            foreach(var u in users)
-            {
-                MessageBox.Show($"{u.UserId}");
-            }
         }
 
         private void MainMenu_Loaded(object sender, RoutedEventArgs e)

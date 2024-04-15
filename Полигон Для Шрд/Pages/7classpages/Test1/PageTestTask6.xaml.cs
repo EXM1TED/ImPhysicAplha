@@ -36,8 +36,8 @@ namespace Полигон_Для_Шрд.Pages._7classpages.Test1
             {
                 NavigationService.Navigate(new PageTestTask7());
             }
-            
-            if(rdButtonCorrectAnswer.IsChecked == true)
+
+            if (rdButtonCorrectAnswer.IsChecked == true)
             {
                 SaveResult.resultOfTest.Result++;
             }

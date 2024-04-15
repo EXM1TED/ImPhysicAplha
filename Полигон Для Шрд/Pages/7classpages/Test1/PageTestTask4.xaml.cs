@@ -25,6 +25,8 @@ namespace Полигон_Для_Шрд.Pages._7classpages.Test1
         public PageTestTask4()
         {
             InitializeComponent();
+            User user = new User();
+            user = UserSave.userSave;
         }
         private void btnNext_Click(object sender, RoutedEventArgs e)
         {

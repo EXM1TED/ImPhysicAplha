@@ -39,6 +39,11 @@ namespace Полигон_Для_Шрд.Windows
                 User user = new User();
                 user.Login = login;
                 user.Password = password;
+                var userId = db.Users.Where(u => u.Login == login && u.Password == password).ToList();
+                foreach(var id in userId)
+                {
+                    user.UserId = id.UserId;
+                }
                 foreach (var className in checkUser)
                     user.Class = className.Class;
                 UserSave.userSave = user;

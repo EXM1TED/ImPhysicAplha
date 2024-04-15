@@ -37,11 +37,10 @@
                 </TextBlock>
             </RadioButton>
             <RadioButton
-                    
-                    Style="{StaticResource radioButtonTest}">
+                    Style="{StaticResource radioButtonTest}"
+                    Name="rdButtonCorrectAnswer">
                 <TextBlock TextWrapping="Wrap"
-                           FontSize="8"
-                           Name="rdButtonCorrectAnswer">
+                           FontSize="8">
                     Молекулы, атомы, элементарные частицы, которые невозможно увидеть человеческим взглядом и их разномерность исчисляется до 10^-18 … 10^-4м, а жизнь от бесконечности до 10^-24 с.
                 </TextBlock>
             </RadioButton>

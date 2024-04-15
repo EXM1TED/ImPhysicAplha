@@ -21,7 +21,6 @@
                        FontSize="32"
                        TextAlignment="Center"/>
             <TextBlock Name="txtBlockResult"
-                       Text="{Binding Path=Result}"
                        FontSize="30"
                        TextAlignment="Center"/>
             <Image Source="/Images/TestCompleteGood.png"

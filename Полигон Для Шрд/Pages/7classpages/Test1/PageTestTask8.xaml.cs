@@ -34,7 +34,6 @@ namespace Полигон_Для_Шрд.Pages._7classpages.Test1
             if (rdButtonCorrectAnswer.IsChecked == true)
             {
                 SaveResult.resultOfTest.Result++;
-
             }
             using (ApplicationContext db = new ApplicationContext())
             {

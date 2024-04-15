@@ -30,11 +30,10 @@ namespace Полигон_Для_Шрд.Pages
             user = UserSave.userSave;
             ApplicationContext db = new ApplicationContext();
             db.Database.EnsureCreated();
-            var results = db.ResultsOfTest.FromSqlRaw($"SELECT Id, User_Id, Name_of_test, Result FROM Results " +
-                $"WHERE User_Id = '{user.UserId}' AND Name_of_test = 'Основы физики'").ToList();
-            foreach ( var item in results)
+            var result = db.ResultsOfTest.Where(r => r.UserId == user.UserId && r.TestName == "Основы физики").ToList();
+            foreach (var test in result)
             {
-                txtBlockResult.Text = $"Ваш результат: {item.Result} из 8";
+                txtBlockResult.Text = $"Ваш результат: {test.Result} из 8";
             }
         }
 
