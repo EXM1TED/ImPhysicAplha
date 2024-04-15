@@ -28,7 +28,6 @@ namespace Полигон_Для_Шрд.Pages._7classpages.Test1
             User user = new User();
             user = UserSave.userSave;
             ResultOfTest result = new ResultOfTest();
-            ApplicationContext db = new ApplicationContext();
             result.Result = 0;
             result.UserId = user.UserId;
             result.TestName = "Основы физики";
@@ -37,8 +36,7 @@ namespace Полигон_Для_Шрд.Pages._7classpages.Test1
 
         private void btnNext_Click(object sender, RoutedEventArgs e)
         {
-            //User user = new User();
-            //user = UserSave.userSave;
+
             if (this.NavigationService.CanGoForward) 
             {
                 this.NavigationService.GoForward();
@@ -55,7 +53,7 @@ namespace Полигон_Для_Шрд.Pages._7classpages.Test1
                 && checkBoxMech.IsChecked == true
                 && checkBoxThermo.IsChecked == true)
             {
-                SaveResult.resultOfTest.Result++;
+               SaveResult.resultOfTest.Result++;
             }
         }
     }

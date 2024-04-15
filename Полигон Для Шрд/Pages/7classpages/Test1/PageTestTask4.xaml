@@ -39,7 +39,7 @@
                 </TextBlock>
             </RadioButton>
             <RadioButton
-     Style="{StaticResource radioButtonTest}">
+                    Style="{StaticResource radioButtonTest}">
                 <TextBlock TextWrapping="Wrap"
                          FontSize="8">
                 Мегамир значительно меньше, чем макромир

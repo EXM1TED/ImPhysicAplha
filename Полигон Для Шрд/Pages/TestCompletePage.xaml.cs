@@ -29,12 +29,14 @@ namespace Полигон_Для_Шрд.Pages
             User user = new User();
             user = UserSave.userSave;
             ApplicationContext db = new ApplicationContext();
-            db.Database.EnsureCreated();
-            var result = db.ResultsOfTest.Where(r => r.UserId == user.UserId && r.TestName == "Основы физики").ToList();
-            foreach (var test in result)
+            ResultOfTest result = new ResultOfTest();
+            result = SaveResult.resultOfTest;
+            db.ResultsOfTest.Add(result);
+            db.SaveChanges();
+            var results = db.ResultsOfTest.Where(r => r.UserId == user.UserId && r.TestName == "Основы физики").ToList();
+            foreach (var test in results)
             {
                 txtBlockResult.Text = $"Ваш результат: {test.Result} из 8";
-                MessageBox.Show($"{test.Result}");
             }
         }
 

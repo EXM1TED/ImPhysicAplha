@@ -37,8 +37,8 @@
                 </TextBlock>
             </RadioButton>
             <RadioButton
-            Name="rdButtonCorrectAnswer"
-            Style="{StaticResource radioButtonTest}">
+                    Name="rdButtonCorrectAnswer"
+                    Style="{StaticResource radioButtonTest}">
                 <TextBlock TextWrapping="Wrap"
                      FontSize="8">
             Путем гипотез, которые в скором времени проверяются экспериментами и опытами

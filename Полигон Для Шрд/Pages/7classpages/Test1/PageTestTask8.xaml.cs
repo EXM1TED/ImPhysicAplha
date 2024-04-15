@@ -29,19 +29,11 @@ namespace Полигон_Для_Шрд.Pages._7classpages.Test1
 
         private void btnCompleteTest_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new TestCompletePage());
-
             if (rdButtonCorrectAnswer.IsChecked == true)
             {
                 SaveResult.resultOfTest.Result++;
             }
-            using (ApplicationContext db = new ApplicationContext())
-            {
-                ResultOfTest result = new ResultOfTest();
-                result = SaveResult.resultOfTest;
-                db.ResultsOfTest.Add(result);
-                db.SaveChanges();
-            }
+            NavigationService.Navigate(new TestCompletePage());
         }
 
         private void btnReturn_Click(object sender, RoutedEventArgs e)
